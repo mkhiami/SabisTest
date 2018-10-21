@@ -1,0 +1,36 @@
+<h3>
+  Student Edit Form
+</h3>
+<form *ngIf="student">
+  <div class="form-group col-md-12">
+    <label for="englishname">Name</label>
+    <input class="form-control" id="englishname" [(ngModel)]="student.nameEn" name="englishname">
+    <div *ngIf="error" class="error-message">English Name!</div>
+  </div>
+  <div class="form-group col-md-12">
+    <label for="englishname">Arabic Name</label>
+    <input class="form-control" id="arabicname" [(ngModel)]="student.nameAr" name="arabicname">
+    <div *ngIf="error" class="error-message">Arabic Name!</div>
+  </div>
+  <div class="form-group col-md-12">
+    <label for="englishname">Major</label>
+    <input class="form-control" id="major" [(ngModel)]="student.major" name="major">
+  </div>
+  <div class="form-group col-md-12">
+    <label for="dateofbirth">Date Of Birth</label>
+    <input type="date" class="form-control" id="dateofbirth" [(ngModel)]="student.dateOfBirth" name="dateofbirth">
+  </div>
+  <div class="form-group col-md-12">
+    <label for="gender">Gender</label>
+    <select class="form-control" name="gender" [(ngModel)]="student.gender">
+      <option value="1">Male</option>
+      <option value="1">Female</option>
+    </select>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" class="btn btn-primary float-left m-2" (click)="saveStudent()">Save</button>
+    </div>
+  </div>
+
+</form>

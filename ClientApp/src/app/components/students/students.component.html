@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-md-4">
+    <table class="table table-responsive table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arabic Name</th>
+          <th>Major</th>
+          <th>Gender</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of students">
+          <td>
+            <a [routerLink]="['/student' , s.id]">
+              {{s.nameEn}}
+            </a>
+          </td>
+          <td> {{s.nameAr}}</td>
+          <td> {{s.major}}</td>
+          <td> {{s.gender == 0 ? 'Male' : 'Female'}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <table class="table table-responsive table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arabic Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of courses">
+          <td> {{s.nameEn}}</td>
+          <td> {{s.nameAr}}</td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <table class="table table-responsive table-bordered">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Term</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of semesters">
+          <td> {{s.title}}</td>
+          <td> {{s.term}}</td>
+          <td> {{s.year}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
